@@ -2,23 +2,6 @@ import React from 'react'
 import { withRouter, Link } from 'react-router-dom'
 import './index.less'
 
-class IndexPage extends React.Component{
-  getInitialProps(){
-    return Promise.resolve({news:[]})
-  }
-
-  render(){
-    return (
-      <div className='normal'>
-        <div className='welcome' />
-        <span>index page</span>
-      </div>
-    )
-  }
-
-}
-
-
 function Page (props) {
   const handler = ()=> {
     console.log(props)
@@ -65,5 +48,4 @@ Page.getInitialProps = () => {
     ]
   })
 }
-// export default withRouter(Page)
-export default withRouter(IndexPage)
+export default withRouter(Page)
